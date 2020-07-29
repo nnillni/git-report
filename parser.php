@@ -3,7 +3,7 @@
 error_reporting(E_ERROR);
 
 $showBranch  = !in_array("-H", $argv);
-$writeReport = !in_array("-o", $argv);
+$writeReport = in_array("-o", $argv);
 $days = ($index = array_search("-d", $argv)) !== false ? $argv[$index+1] : 1;
 $days++;
 
