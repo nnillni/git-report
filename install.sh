@@ -1,0 +1,1 @@
+ln -s $(pwd)/git-report /usr/bin/git-report

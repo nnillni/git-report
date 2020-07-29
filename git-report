@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+FILENAME=`python -c "import os; print(os.path.realpath('$0'))"`;
+DIR=`dirname $FILENAME`;
+
+$DIR/git-standup/git-standup "$@" | php $DIR/parser.php "$@"
